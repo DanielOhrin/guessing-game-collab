@@ -3,21 +3,24 @@
 void Main()
 {
     Console.WriteLine("Guess the secret number!");
-    int userGuess = int.Parse(Console.ReadLine());
+    int userGuess;
 
     int secretNumber = 42;
 
-    Console.WriteLine(secretNumber);
 
-    if (userGuess == secretNumber)
+    for (int i = 1; i < 5; i++)
     {
-        Console.WriteLine("You got it correct");
-    }
-    else
-    {
-        Console.WriteLine("Try Again");
-    }
+        userGuess = int.Parse(Console.ReadLine());
 
+        if (userGuess == secretNumber)
+        {
+            Console.WriteLine("You got it correct");
+        }
+        else
+        {
+            Console.WriteLine("Try Again");
+        }
+    }
 }
 
 Main();

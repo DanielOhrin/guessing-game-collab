@@ -1,12 +1,23 @@
 ﻿using System;
 
-namespace GuessingGame
+void Main()
 {
-    class Program
+    Console.WriteLine("Guess the secret number!");
+    int userGuess = int.Parse(Console.ReadLine());
+
+    int secretNumber = 42;
+
+    Console.WriteLine(secretNumber);
+
+    if (userGuess == secretNumber)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine("You got it correct");
     }
+    else
+    {
+        Console.WriteLine("Try Again");
+    }
+
 }
+
+Main();

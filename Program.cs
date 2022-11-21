@@ -5,8 +5,7 @@ void Main()
     Console.WriteLine("Guess the secret number!");
     int userGuess;
 
-    int secretNumber = 42;
-
+    int secretNumber = new Random().Next(1, 101);
 
     for (int i = 1; i < 5; i++)
     {
@@ -19,7 +18,7 @@ void Main()
         }
         else
         {
-            Console.WriteLine($"Try Again. You are on guess {i + 1}");
+            Console.WriteLine($"Try Again. You have {5 - 1} guesses left.");
         }
     }
 }
